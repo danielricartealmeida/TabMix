@@ -1,8 +1,8 @@
 # TabMix — música + voz
 
-Versão 1.0.0 estável. Uma extensão Manifest V3 captura **somente a guia em que você clicar**, mistura seu microfone e reproduz o resultado em um dispositivo de áudio virtual. Sem servidor, dependências npm ou aplicativo adicional do TabMix.
+Versão 1.0.0 estável.
 
-Deixei temas claro, escuro e automático, com preferência salva. Para atualizar sem perder as configurações, veja em [ATUALIZAR.md](ATUALIZAR.md).
+Uma extensão Manifest V3 captura **somente a guia em que você clicar**, mistura seu microfone e reproduz o resultado em um dispositivo de áudio virtual. Sem servidor, dependências npm ou aplicativo adicional do TabMix. Deixei 3 temas, um claro, um escuro e o automático (com preferência salva). Para atualizar sem perder as configurações, veja em [ATUALIZAR.md](ATUALIZAR.md).
 
 ## O que vem nesta versão
 
@@ -17,9 +17,9 @@ Deixei temas claro, escuro e automático, com preferência salva. Para atualizar
 
 ## 1. Instalar a ponte para o Discord
 
-O TabMix mistura o áudio, mas não instala nem cria um driver de microfone no Windows. Para o Discord desktop receber a mistura, instale um cabo virtual compatível, como o [VB-CABLE, do fabricante](https://vb-audio.com/Cable/).
+O TabMix mistura o áudio, mas não instala nem cria um driver de microfone no Windows. Então, para o Discord desktop receber a mistura, instale um cabo virtual compatível, como o [VB-CABLE, do fabricante](https://vb-audio.com/Cable/). Baixe do fabricante, extraia o ZIP, execute o instalador adequado ao seu Windows como administrador e reinicie conforme as instruções do fabricante.
 
-Baixe do fabricante, extraia o ZIP, execute o instalador adequado ao seu Windows como administrador e reinicie conforme as instruções do fabricante. O driver não está incluído neste projeto. Se você já usa outro dispositivo virtual, pode selecioná-lo no lugar do VB-CABLE.
+(O driver não está incluído neste projeto. Se você já usa outro dispositivo virtual, pode selecioná-lo no lugar do VB-CABLE.)
 
 | Onde | Dispositivo |
 | --- | --- |
@@ -59,7 +59,7 @@ O Edge interrompe a reprodução normal de uma guia capturada. Por isso o TabMix
 
 ## Ajustes e diagnóstico
 
-- **O Discord corta a música:** experimente desativar a supressão de ruído/Krisp, controle automático de ganho e cancelamento de eco do Discord para essa entrada. Ajuste a sensibilidade manual se os trechos baixos forem cortados. Use fones. As opções e resultados dependem da versão do Discord e do seu equipamento.
+- **O Discord corta a música:** desative a supressão de ruído/Krisp, altere o perfil de entrada para "Estúdio" para não ter processamento nenhum (mais limpo), desative o controle automático de ganho e cancelamento de eco do Discord para essa entrada. Ajuste a sensibilidade manual se os trechos baixos forem cortados. Use fones. As opções e resultados dependem da versão do Discord e do seu equipamento.
 - **Sem som no fone:** confirme Retorno ativado e escolha o fone físico explicitamente. Pare antes de mudar o destino.
 - **Microfone não aparece:** use a página de configuração para autorizar, confira a permissão de microfone no Windows/Edge e clique em Atualizar dispositivos.
 - **CABLE Input não aparece:** confirme a instalação do driver e reinicie o navegador/Windows conforme o fabricante orienta. O projeto não instala o driver.

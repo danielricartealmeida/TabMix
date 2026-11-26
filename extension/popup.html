@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TabMix · Música + voz</title><link rel="stylesheet" href="style.css"><script src="theme.js"></script></head>
+<body>
+<main>
+  <header><div class="brand" aria-hidden="true"><img src="icons/icon48.png" srcset="icons/icon96.png 2x" width="44" height="44" alt=""></div><div><h1>TabMix <small>0.2.1</small></h1><p>Sua voz, com trilha sonora.</p></div><span id="badge" role="status">PARADO</span></header>
+  <div class="appearance"><label for="theme">Aparência</label><select id="theme" aria-label="Tema da interface"><option value="system">Automático</option><option value="light">Claro</option><option value="dark">Escuro</option></select></div>
+  <span id="themeStatus" class="hint" role="status"></span>
+  <div class="notice" id="setupHint">Primeiro uso? <button id="setup" class="link">Autorizar microfone e configurar</button></div>
+  <section class="routing"><h2>Roteamento</h2>
+    <label>Microfone <select id="micId" class="device"></select></label>
+    <label>Enviar mistura para <select id="outputId" class="device"></select></label>
+    <p class="hint">Use <strong>CABLE Input</strong> aqui e <strong>CABLE Output</strong> como entrada no Discord.</p>
+    <label>Ouvir música em <select id="monitorId" class="device"></select></label>
+    <label class="check"><input type="checkbox" id="monitor"> Retorno da música no fone</label>
+    <p class="hint">O retorno não inclui sua voz. Selecione o fone físico, evitando saídas virtuais.</p>
+    <div class="buttons"><button id="permission" class="secondary" hidden>Autorizar microfone</button><button id="refresh" class="secondary">Atualizar dispositivos</button></div>
+  </section>
+  <section><h2>Canais</h2>
+    <div class="channel"><div class="line"><label for="micVolume">Microfone</label><label class="mute"><input id="micMuted" type="checkbox"> Mute</label></div><meter id="micMeter" min="0" max="1" high="0.9" optimum="0.3" value="0"></meter><div class="fader"><input id="micVolume" type="range" min="0" max="100" value="70"><output for="micVolume">70%</output></div></div>
+    <div class="channel"><div class="line"><label for="musicVolume">Música → Discord</label><label class="mute"><input id="musicMuted" type="checkbox"> Mute</label></div><meter id="musicMeter" min="0" max="1" high="0.9" optimum="0.3" value="0"></meter><div class="fader"><input id="musicVolume" type="range" min="0" max="100" value="15"><output for="musicVolume">15%</output></div></div>
+    <label class="check"><input type="checkbox" id="ducking"> Baixar a música enquanto eu falo <span id="duckState"></span></label>
+    <label for="monitorVolume">Música no seu fone</label><div class="fader"><input id="monitorVolume" type="range" min="0" max="100" value="50"><output for="monitorVolume">50%</output></div>
+    <label for="masterVolume">Saída da mistura</label><meter id="outputMeter" min="0" max="1" high="0.9" optimum="0.3" value="0"></meter><div class="fader"><input id="masterVolume" type="range" min="0" max="100" value="80"><output for="masterVolume">80%</output></div>
+  </section>
+  <p id="source">Abra a guia da música para começar.</p>
+  <div id="error" role="alert" hidden></div>
+  <div class="buttons transport"><button id="start">Capturar esta guia + voz</button><button id="stop" class="secondary" disabled>Parar</button></div>
+  <footer>A mistura continua quando este painel fecha.<br>Você controla quando capturar e quando parar.</footer>
+</main>
+<script src="popup.js"></script>
+</body></html>
+
+

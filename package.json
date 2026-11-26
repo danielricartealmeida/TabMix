@@ -1,0 +1,9 @@
+{
+  "name": "tabmix",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Extensão para misturar o áudio de uma guia com o microfone e enviar ao Discord via cabo virtual.",
+  "scripts": {
+    "test": "node --test tests/engine.test.cjs"
+  }
+}

@@ -1,8 +1,8 @@
 # TabMix — música + voz
 
-Versão 0.2.1 para Microsoft Edge no Windows. Uma extensão Manifest V3 captura **somente a guia em que você clicar**, mistura seu microfone e reproduz o resultado em um dispositivo de áudio virtual. Sem servidor, dependências npm ou aplicativo adicional do TabMix.
+Versão 1.0.0 estável. Uma extensão Manifest V3 captura **somente a guia em que você clicar**, mistura seu microfone e reproduz o resultado em um dispositivo de áudio virtual. Sem servidor, dependências npm ou aplicativo adicional do TabMix.
 
-Temas claro, escuro e automático, com preferência salva. Para atualizar sem perder as configurações, veja [ATUALIZAR.md](ATUALIZAR.md).
+Deixei temas claro, escuro e automático, com preferência salva. Para atualizar sem perder as configurações, veja em [ATUALIZAR.md](ATUALIZAR.md).
 
 ## O que vem nesta versão
 
